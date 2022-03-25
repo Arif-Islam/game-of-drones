@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "DJI Mavic Mini",
+        "image": "images/drone1.jpg",
+        "price": "$870"
+    },
+    {
+        "id": 2,
+        "name": "FPV Camera Drone",
+        "image": "images/drone2.jpg",
+        "price": "$1024"
+    },
+    {
+        "id": 3,
+        "name": "DJI Mavic 2 Pro",
+        "image": "images/drone3.jpg",
+        "price": "$999"
+    },
+    {
+        "id": 4,
+        "name": "Skydio 2 +",
+        "image": "images/drone4.jpg",
+        "price": "$1159"
+    },
+    {
+        "id": 5,
+        "name": "Autel EVO II Series",
+        "image": "images/drone5.jpg",
+        "price": "$1087"
+    },
+    {
+        "id": 6,
+        "name": "DJI Phantom 4 Pro V2.0",
+        "image": "images/drone6.jpg",
+        "price": "$1224"
+    },
+    {
+        "id": 7,
+        "name": "Parrot Anafi",
+        "image": "images/drone7.jpg",
+        "price": "$469"
+    },
+    {
+        "id": 8,
+        "name": "Ryze Tello",
+        "image": "images/drone8.jpg",
+        "price": "$990"
+    },
+    {
+        "id": 9,
+        "name": "DJI Mavic 3",
+        "image": "images/drone9.jpg",
+        "price": "$1449"
+    }
+]
