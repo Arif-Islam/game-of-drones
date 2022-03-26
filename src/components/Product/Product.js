@@ -4,6 +4,7 @@ import React from 'react';
 import './Product.css';
 
 const Product = ({product, handleAddToCart}) => {
+    // destructuring product properties from for later use
     const { name, image, price } = product;
     return (
         <div className='product'>

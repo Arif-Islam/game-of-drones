@@ -4,21 +4,24 @@ import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
+    // useStates for products, cart, random item
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [randomProduct, setRandomProduct] = useState('');
 
+    // clear selected items
     const clearCart = () => {
         setCart([]);
-        setRandomProduct('');
     }
 
+    // generate random item from selected items
     const generateRandomProduct = (cart) => {  
         const randomProduct = cart[Math.floor(Math.random() * cart.length)];
         setRandomProduct(randomProduct);
-        console.log('random', randomProduct.name);   
+        // console.log('random', randomProduct.name);
     }
 
+    // add selected items to cart on cart button click
     const handleAddToCart = (selectedProduct) => {
         let newCart = [];
         if (cart.includes(selectedProduct) === false) {
@@ -30,6 +33,7 @@ const Shop = () => {
         setCart(newCart);
     }
 
+    // fetch fake data from products.json
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -38,6 +42,7 @@ const Shop = () => {
 
     return (
         <div className='shop-container'>
+            {/* products section */}
             <div className='products-container'>
                 {
                     products.map(product => <Product
@@ -47,18 +52,24 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
+            {/* cart section */}
             <div className='cart-container'>
-                <h2>Selected Items</h2>
+                <Cart cart={cart}
+                generateRandomProduct = {generateRandomProduct}
+                clearCart = {clearCart}
+                randomProduct = {randomProduct}
+                ></Cart>
+                {/* <h2>Selected Items</h2>
                 {
                     cart.map(item => <Cart key={item.id} item={item}></Cart>)
                 }
 
                 <h3>Randomly Selected</h3>
-                <input type="text" value={randomProduct.name} style={{textAlign:'center'}}/>
+                <input className='showRandom' type="text" value={randomProduct.name} style={{textAlign:'center'}}/>
                 <p></p>
-                <button onClick={() => generateRandomProduct(cart)}>Choose one for me</button>
+                <button className='btnRandom' onClick={() => generateRandomProduct(cart)}>Choose one for me</button>
                 <p></p>
-                <button onClick={() => clearCart()}>Choose Again</button>
+                <button className='btnClear' onClick={() => clearCart()}>Choose Again</button> */}
             </div>
         </div>
     );
