@@ -15,7 +15,7 @@ const Shop = () => {
     }
 
     // generate random item from selected items
-    const generateRandomProduct = (cart) => {  
+    const generateRandomProduct = (cart) => {
         const randomProduct = cart[Math.floor(Math.random() * cart.length)];
         setRandomProduct(randomProduct);
         // console.log('random', randomProduct.name);
@@ -55,21 +55,10 @@ const Shop = () => {
             {/* cart section */}
             <div className='cart-container'>
                 <Cart cart={cart}
-                generateRandomProduct = {generateRandomProduct}
-                clearCart = {clearCart}
-                randomProduct = {randomProduct}
+                    generateRandomProduct={generateRandomProduct}
+                    clearCart={clearCart}
+                    randomProduct={randomProduct}
                 ></Cart>
-                {/* <h2>Selected Items</h2>
-                {
-                    cart.map(item => <Cart key={item.id} item={item}></Cart>)
-                }
-
-                <h3>Randomly Selected</h3>
-                <input className='showRandom' type="text" value={randomProduct.name} style={{textAlign:'center'}}/>
-                <p></p>
-                <button className='btnRandom' onClick={() => generateRandomProduct(cart)}>Choose one for me</button>
-                <p></p>
-                <button className='btnClear' onClick={() => clearCart()}>Choose Again</button> */}
             </div>
         </div>
     );

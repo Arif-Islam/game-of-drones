@@ -16,39 +16,7 @@
     text-align: center;
     border-radius: 5px;
 }
-/* .showRandom{
-    border: 1px solid black;
-    width: 210px;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: azure;
-    font-size: 18px;
-    font-weight: 600;
-}
-.btnRandom{
-    background-color:azure;
-    padding: 8px 10px;
-    border: 1px solid azure;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-}
-.btnRandom:hover{
-    background-color: aquamarine;
-    border: aquamarine;
-}
-.btnClear{
-    background-color: salmon;
-    padding: 8px 10px;
-    border: 1px solid salmon;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-}
-.btnClear:hover{
-    background-color: rgba(250, 128, 114, 0.418);
-    border: none;
-} */
+
 
 /* Mobile view responsive style */
 @media only screen and (max-width:688px){

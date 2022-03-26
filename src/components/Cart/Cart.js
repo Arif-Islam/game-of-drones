@@ -1,14 +1,14 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = ({ cart, randomProduct, generateRandomProduct, clearCart }) => {
+const Cart = (props) => {
+    const { cart, randomProduct, generateRandomProduct, clearCart } = props;
 
-    // console.log(item);
     return (
         <div>
             <h2>Selected items: {cart.length}</h2>
             {
-                cart.map(item => <p key={item.id}>{item.name}</p>)
+                cart.map(item => <p style={{ fontSize: '17px' }} key={item.id}>{item.name}</p>)
             }
             <h3>Randomly Selected</h3>
             <input className='showRandom' type="text" value={randomProduct.name} style={{ textAlign: 'center' }} />

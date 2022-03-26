@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
 import QA from './components/QA/QA';
 import Shop from './components/Shop/Shop';
 import Subtitle from './components/Subtitle/Subtitle';
@@ -11,6 +12,7 @@ function App() {
       <Subtitle></Subtitle>
       <Shop></Shop>
       <QA></QA>
+      <Footer></Footer>
     </div>
   );
 }
