@@ -7,14 +7,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    margin: auto;
 }
 .cart-container{
     background-color: #EAE2B7;
     /* color: white; */
     text-align: center;
     border-radius: 5px;
+    margin-right: 50px;
 }
 
 
@@ -37,5 +39,19 @@
         position: sticky;
         top: 0;
         padding-bottom: 20px;
+        /* margin-right: 0; */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Media query */
+@media only screen and (min-width: 1024px) and (max-width: 1556px) {
+    .products-container{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .cart-container{
+        margin-right: 0;
     }
 }
