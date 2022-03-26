@@ -8,7 +8,7 @@
     {
         "id": 2,
         "name": "FPV Camera Drone",
-        "image": "images/drone2.jpg",
+        "image": "images/drone5.jpg",
         "price": "$1024"
     },
     {
@@ -26,7 +26,7 @@
     {
         "id": 5,
         "name": "Autel EVO II Series",
-        "image": "images/drone5.jpg",
+        "image": "images/drone2.jpg",
         "price": "$1087"
     },
     {

@@ -6,18 +6,19 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
-    const [randomNumber, setRandomNumber] = useState('');
+    const [randomProduct, setRandomProduct] = useState('');
 
-    const generateRandomNumber = () => {
-        console.log(cart);
-        const names = [];
-        for (const name of cart) {
-            names.push(name);
-        }
-        const randomNumber = Math.floor(Math.random() * names.length);
-        setRandomNumber(randomNumber);
+    const clearCart = () => {
+        setCart([]);
+        setRandomProduct('');
     }
-    console.log(randomNumber);
+
+    const generateRandomProduct = (cart) => {  
+        const randomProduct = cart[Math.floor(Math.random() * cart.length)];
+        setRandomProduct(randomProduct);
+        console.log('random', randomProduct.name);   
+    }
+
     const handleAddToCart = (selectedProduct) => {
         let newCart = [];
         if (cart.includes(selectedProduct) === false) {
@@ -51,7 +52,13 @@ const Shop = () => {
                 {
                     cart.map(item => <Cart key={item.id} item={item}></Cart>)
                 }
-                <button onClick={() => generateRandomNumber}>Choose one for me</button>
+
+                <h3>Randomly Selected</h3>
+                <input type="text" value={randomProduct.name} style={{textAlign:'center'}}/>
+                <p></p>
+                <button onClick={() => generateRandomProduct(cart)}>Choose one for me</button>
+                <p></p>
+                <button onClick={() => clearCart()}>Choose Again</button>
             </div>
         </div>
     );
